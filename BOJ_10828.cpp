@@ -13,7 +13,7 @@ public:
     Stack() 
     {
         top=-1; 
-        capacity = 4;
+        capacity = 1001;
         stack = new int[capacity];
     }
     void Push(int &x);
@@ -25,14 +25,14 @@ public:
 
 void Stack::Push(int &x)
 {
-    if(top==capacity-1) //스택이 가득 차있을 경우
+    /*if(top==capacity-1) //스택이 가득 차있을 경우
     {
         capacity*=2;
         int *temp = new int[capacity]; //두배 더 큰 배열 temp
         for(int i=0; i<=top; i++) temp[i]=stack[i]; 
         stack=temp; //stack이 이제 더 큰 배열 temp를 가리킴
         delete [] temp; //temp가 더이상 temp를 가리키지 않음
-    }
+    }*/
     stack[++top]=x; //top을 한칸 올린후에 그 위치에 x를 삽입
 }
 
